@@ -17,7 +17,7 @@ renamed as (
         ,[statecode]
         ,[statuscode]
         ,[createdby]
-        ,[createdby_entitytype]4
+        ,[createdby_entitytype]
         ,[createdonbehalfby]
         ,[createdonbehalfby_entitytype]
         ,[modifiedby]

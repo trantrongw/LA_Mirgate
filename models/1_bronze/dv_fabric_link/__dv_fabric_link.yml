@@ -7,4 +7,6 @@ sources:
     tables:
       - name: vn_purpose
       - name: crcc8_stage
-      
+      - name: vn_state
+      - name: crcc8_transactiontype
+      - name: vn_referrer
