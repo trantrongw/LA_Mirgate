@@ -1,0 +1,10 @@
+version: 2
+
+sources:
+  - name: dv_fabric_link
+    database: dataverse_msfabric_link
+    schema: dbo
+    tables:
+      - name: vn_purpose
+      - name: crcc8_stage
+      
