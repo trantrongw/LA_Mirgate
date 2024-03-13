@@ -1,16 +1,16 @@
 SELECT 
     A.*,
     --ref
-    [StageId]=B.Id,
-    [PurposeId]=C.Id,
-    [TransactionTypeId]=D.Id,
-    [ReferrerId]=E.Id,
-    [StateId]=F.Id,
+    [vn_stage]=B.Id,
+    [vn_purposeid]=C.Id,
+    [vn_crcc8_TransactionType]=D.Id,
+    [vn_referrer]=E.Id,
+    [vn_state]=F.Id,
     --migrate
-    [Migrate Date] = cast('2024-03-10' as Date),
-    [Migrate Code]= '2024_03_10_1'
+    [vn_migratedate] = GETDATE(),
+    [vn_migratecode]= A.FileName
 
-FROM {{ ref('s_la_tracker__opportunity') }} A
+FROM {{ ref('s_la_tracker__opportunity_dedup') }} A
 JOIN {{ ref('s_dv_fabric_link__crcc8_stage') }} B ON A.StageCode = B.Code
 JOIN {{ ref('s_dv_fabric_link__vn_purpose') }} C ON A.PurposeCode = C.Code
 JOIN {{ ref('s_dv_fabric_link__crcc8_transactiontype') }} D ON A.TransactionCode = D.Code
