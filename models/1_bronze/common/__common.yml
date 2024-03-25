@@ -1,0 +1,8 @@
+version: 2
+
+sources:
+  - name: common
+    database: LA_DataWarehouse
+    schema: dbo
+    tables:
+      - name: Stage_Transactiontype_Link

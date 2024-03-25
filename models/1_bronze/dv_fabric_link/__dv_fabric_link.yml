@@ -13,3 +13,5 @@ sources:
       - name: vn_opportunity
       - name: vn_brokercode
       - name: systemuser
+      - name: vn_tier
+      - name: vn_assignuseropps
