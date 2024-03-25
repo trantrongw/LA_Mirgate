@@ -2,7 +2,7 @@ with
 
 source as (
 
-    select * from {{ source('la_tracker', 'opportunity') }}
+    select * from {{ source('la_tracker', 'tracker') }}
 
 ),
 
@@ -61,6 +61,7 @@ renamed as (
             ,[Comms_Confirmed_with_Banker]
             ,[Comm_Lodged]
             ,[Comm_Paid]
+            ,[OPP_ID]
             ,[Loadtime]
     from source
 

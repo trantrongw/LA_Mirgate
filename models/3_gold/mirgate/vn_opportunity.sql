@@ -10,11 +10,11 @@ SELECT
     [vn_migratedate] = GETDATE(),
     [vn_migratecode]= A.FileName
 
-FROM {{ ref('s_la_tracker__opportunity_dedup') }} A
-JOIN {{ ref('s_dv_fabric_link__crcc8_stage') }} B ON A.StageCode = B.Code
-JOIN {{ ref('s_dv_fabric_link__vn_purpose') }} C ON A.PurposeCode = C.Code
-JOIN {{ ref('s_dv_fabric_link__crcc8_transactiontype') }} D ON A.TransactionCode = D.Code
-JOIN {{ ref('s_dv_fabric_link__vn_referrer') }} E ON A.ReferrerCode = E.Code
-JOIN {{ ref('s_dv_fabric_link__vn_state') }} F ON A.StateCode = F.Code
+FROM {{ ref('ref_tracker_dedup') }} A
+LEFT JOIN {{ ref('s_dv_fabric_link__crcc8_stage') }} B ON A.StageCode = B.Import_Code
+LEFT JOIN {{ ref('s_dv_fabric_link__vn_purpose') }} C ON A.PurposeCode = C.Code
+LEFT JOIN {{ ref('s_dv_fabric_link__crcc8_transactiontype') }} D ON A.TransactionCode = D.Code
+LEFT JOIN {{ ref('s_dv_fabric_link__vn_referrer') }} E ON A.ReferrerCode = E.Code
+LEFT JOIN {{ ref('s_dv_fabric_link__vn_state') }} F ON A.StateCode = F.Code
 
 --Where FileName = 'RT Tracker Opps + Lodged 1RT.xlsm'

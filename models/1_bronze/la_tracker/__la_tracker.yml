@@ -5,5 +5,5 @@ sources:
     database: RAW_LA_SharePoint
     schema: dbo
     tables:
-      - name: opportunity
+      - name: tracker
       

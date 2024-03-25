@@ -12,3 +12,4 @@ sources:
       - name: vn_referrer
       - name: vn_opportunity
       - name: vn_brokercode
+      - name: systemuser
