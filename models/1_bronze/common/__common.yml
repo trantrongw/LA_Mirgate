@@ -2,7 +2,8 @@ version: 2
 
 sources:
   - name: common
-    database: LA_DataWarehouse
+    database: RAW_LA_COMMON
     schema: dbo
     tables:
       - name: Stage_Transactiontype_Link
+      - name: Date
