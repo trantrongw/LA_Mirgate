@@ -4,6 +4,7 @@ SELECT
     A.Amount,
     A.[Opportunity Date],
     A.[Lodged Date],
+    A.[Proposed Date],
     A.[Stage days],
     A.[Purpose],
     A.[Stage],
