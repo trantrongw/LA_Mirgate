@@ -11,7 +11,7 @@ Select
     [Purpose]=[vn_purposeidname],
     [Stage]=[vn_stagename],
     [Transaction Type]=[vn_crcc8_transactiontypename],
-    [state]=[vn_statename],
+    [State]=[vn_statename],
     [Referrer]=[vn_referrername],
     --reference
     [Stage Id] = vn_stage,

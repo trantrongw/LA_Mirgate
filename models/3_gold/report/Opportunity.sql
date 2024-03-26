@@ -8,15 +8,18 @@
     A.[Stage days],
     A.[Purpose],
     A.[Stage],
+    [Stage Sort]=D.[Stage Level],
     A.[Transaction Type],
-    A.[state],
+    A.[State],
     --cal
     C.[Status],
-    B.[Tier]
+    B.[Tier],
+    [Tier Sort] = B.[Min Value]
 from {{ ref('s_dv_fabric_link__vn_opportunity') }} A
+INNER JOIN {{ ref('s_dv_fabric_link__crcc8_stage') }} D ON A.[Stage Id] = D.Id
 OUTER APPLY 
 (
-    SELECT TOP 1 T.[Tier]
+    SELECT TOP 1 T.[Tier],T.[Min Value]
     FROM {{ ref('s_dv_fabric_link__vn_tier') }} T
     WHERE T.[Min Value] <= A.Amount AND T.[Max Value] > A.Amount
 ) B
