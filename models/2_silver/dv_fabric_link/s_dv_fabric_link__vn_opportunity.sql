@@ -5,6 +5,7 @@ Select
     --Calc
     [Opportunity Date]=cast([vn_opportunitydate] as Date) ,
     [Lodged Date]=cast([vn_lodgeddate] as Date) ,
+    [Proposed Date]=cast([vn_proposeddate] as Date) ,
     [Stage days] = datediff(day,[createdon],getdate()),
     --ref name
     [Purpose]=[vn_purposeidname],
