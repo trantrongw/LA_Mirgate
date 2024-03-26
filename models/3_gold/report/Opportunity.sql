@@ -1,4 +1,4 @@
-SELECT
+ SELECT
     A.[Opportunity Id],
     A.[Opportunity Code],
     A.Amount,
@@ -18,7 +18,7 @@ OUTER APPLY
 (
     SELECT TOP 1 T.[Tier]
     FROM {{ ref('s_dv_fabric_link__vn_tier') }} T
-    WHERE T.[Min Value] >= A.Amount AND T.[Max Value] < A.Amount
+    WHERE T.[Min Value] <= A.Amount AND T.[Max Value] > A.Amount
 ) B
 OUTER APPLY 
 (
