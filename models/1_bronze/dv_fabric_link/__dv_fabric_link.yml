@@ -1,0 +1,17 @@
+version: 2
+
+sources:
+  - name: dv_fabric_link
+    database: dataverse_msfabric_link
+    schema: dbo
+    tables:
+      - name: vn_purpose
+      - name: crcc8_stage
+      - name: vn_state
+      - name: crcc8_transactiontype
+      - name: vn_referrer
+      - name: vn_opportunity
+      - name: vn_brokercode
+      - name: systemuser
+      - name: vn_tier
+      - name: vn_assignuseropps

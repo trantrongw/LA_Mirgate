@@ -1,0 +1,9 @@
+version: 2
+
+sources:
+  - name: la_tracker
+    database: RAW_LA_SharePoint
+    schema: dbo
+    tables:
+      - name: tracker
+      
